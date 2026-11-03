@@ -1,0 +1,78 @@
+<title>תהילים</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="תהילים">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap">
+<style>
+/*STYLE*/
+</style>
+
+<div id="app" dir="rtl" lang="he">
+  <header class="top">
+    <h1>תהילים<span class="sub" id="progress"></span></h1>
+    <button class="icon-btn" id="openSet" type="button" aria-label="הגדרות">הגדרות</button>
+  </header>
+
+<!--SAMPLE-->
+  <p class="notice" id="noSpeech" hidden>הדפדפן הזה לא תומך בהקראה.</p>
+  <p class="notice" id="noVoice" hidden>לא נמצא קול עברי במכשיר. באייפון: הגדרות, נגישות, תוכן מדובר, קולות, עברית.</p>
+
+  <section id="home">
+    <button class="resume" id="resume" type="button"><span id="resumeLabel"></span><span class="go" id="resumeGo"></span></button>
+    <div class="grid" id="grid"></div>
+    <div class="foot"><button class="link-btn" id="reset" type="button">אפס את כל הסימונים</button></div>
+  </section>
+
+  <section id="reader" hidden>
+    <div class="reader-head">
+      <button class="icon-btn" id="back" type="button" aria-label="חזרה לכל הפרקים">כל הפרקים</button>
+      <h2 id="chTitle"></h2>
+      <button class="mark" id="mark" type="button" aria-pressed="false">סמן כנקרא</button>
+    </div>
+    <div class="verses" id="verses"></div>
+    <div class="dock">
+      <div class="dock-in">
+        <div class="bar" aria-hidden="true"><i id="barFill"></i></div>
+        <div class="status"><span id="status">מוכן</span><span id="where"></span></div>
+        <div class="transport">
+          <button class="t-btn" id="prev" type="button" aria-label="פסוק קודם">▶︎|</button>
+          <button class="t-btn play" id="play" type="button" aria-label="נגן">▶</button>
+          <button class="t-btn" id="next" type="button" aria-label="פסוק הבא">|◀︎</button>
+        </div>
+        <div class="range"><label for="endSel">קריאה ברצף:</label><select id="endSel"></select></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="scrim" id="sheet" hidden>
+  <div class="sheet" role="dialog" aria-label="הגדרות">
+    <h3>הגדרות</h3>
+    <div class="row">
+      <label for="rate">מהירות הקריאה <span class="val" id="rateV"></span></label>
+      <input id="rate" type="range" min="0.6" max="1.2" step="0.05">
+    </div>
+    <div class="row">
+      <label for="pm">אורך ההפסקה בין פסוקים <span class="val" id="pmV"></span></label>
+      <input id="pm" type="range" min="0" max="3" step="0.25">
+      <span class="hint" id="pmHint"></span>
+    </div>
+    <div class="row">
+      <label for="scale">גודל הטקסט <span class="val" id="scaleV"></span></label>
+      <input id="scale" type="range" min="0.8" max="1.6" step="0.1">
+    </div>
+    <div class="row check">
+      <label for="strip">הקראה בלי ניקוד<br><span class="hint">הקול העברי קורא טוב יותר טקסט ללא ניקוד. שם ה׳ מוקרא "אדוני".</span></label>
+      <input id="strip" type="checkbox">
+    </div>
+    <button class="done" id="closeSet" type="button">סגור</button>
+  </div>
+</div>
+
+<!--DATA-->
+<script>
+/*CORE*/
+</script>
+<script>
+/*APP*/
+</script>
